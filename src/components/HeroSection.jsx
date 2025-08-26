@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import profileImage from "../assets/profile.jpeg"; // Adjust the path as necessary
 import { ArrowDown, GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import { containerVariants, itemVariants } from "../utils/helper";
+import TextChanger from "../utils/TextChanger";
 
 export const HeroSection = () => {
   const { scrollY } = useScroll();
@@ -78,7 +79,7 @@ export const HeroSection = () => {
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
-                className="text-center"
+                className="text-center pt-6"
               >
                 {/* profile image -mobile */}
                 <motion.div variants={imageVariants} className="mb-8">
@@ -107,29 +108,28 @@ export const HeroSection = () => {
                 </motion.div>
 
                 {/* content -mobile */}
-                <motion.div
-                  variants={textVariants}
-                  className="text-sm uppercase tracking-widest text-foreground mb-4"
-                >
-                  Fullstack Developer
-                </motion.div>
                 <motion.h1
                   variants={itemVariants}
                   className="text-3xl md:text:5xl font-light leading-tight"
                 >
-                  <span className="text-foreground">Building digital</span>
+                  <span className="text-foreground">Hi, It's </span>
                   <span className="text-blue-500 font-medium ml-2">
-                    experiences
+                    Sathurjan
                   </span>
                   <br />
-                  <span className="text-foreground">that matter</span>
+                  <span className="text-foreground font-medium flex justify-start pl-8 gap-3 text-xl">I'm a
+                    <TextChanger />
+                  </span>
                 </motion.h1>
                 <motion.p
                   variants={itemVariants}
-                  className="text-base md:text-lg text-foreground mb-8 max-w-xl mx-auto font-light leading-relaxed"
+                  className="text-base md:text-lg text-foreground mb-8 max-w-xl mx-auto font-light leading-relaxed px-4 text-left"
                 >
-                  I craft beautiful, functional web applications with modern
-                  technologies and thoughtful user experiences.
+                  I’m a passionate developer specializing in full-stack web
+                  development, Flutter mobile apps, and modern web design.I
+                  build functional, visually appealing, and user-friendly
+                  applications that bring ideas to life with clean code and
+                  creativity.
                 </motion.p>
                 {/* buttons */}
                 <motion.div
@@ -178,7 +178,7 @@ export const HeroSection = () => {
               </motion.div>
             </div>
             {/* desktop layout split */}
-            <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+            <div className="hidden lg:grid lg:grid-cols-[60%_40%] lg:gap-16 lg:items-center px-5">
               {/* left column-left */}
               <motion.div
                 initial="hidden"
@@ -186,28 +186,32 @@ export const HeroSection = () => {
                 variants={containerVariants}
                 className="text-left"
               >
-                <motion.div
-                  variants={textVariants}
-                  className="text-sm uppercase tracking-widest text-foreground mb-6"
-                >
-                  Fullstack Developer
-                </motion.div>
                 <motion.h1
                   variants={itemVariants}
-                  className="text-5xl xl:text-7xl font-light mb-8 leading-tight"
+                  className="text-4xl xl:text-6xl font-light mb-2 leading-tight mt-15"
                 >
-                  <span className="text-foreground">Building digital</span>
+                  <span className="text-foreground font-medium">Hi, It's </span>
+                  <span className="text-blue-500 font-medium">Sathurjan</span>
                   <br />
-                  <span className="text-blue-500 font-medium">experiences</span>
-                  <br />
-                  <span className="text-foreground">that matter</span>
                 </motion.h1>
+                <motion.h2
+                  variants={itemVariants}
+                  className="text-2xl xl:text-4xl font-light mb-8 leading-tight"
+                >
+                  <span className="text-foreground font-medium flex gap-3">
+                    I'm a
+                    <TextChanger />
+                  </span>
+                </motion.h2>
                 <motion.p
                   variants={itemVariants}
-                  className="text-xl text-foreground mb-12 font-light leading-relaxed max-w-lg"
+                  className="text-lg text-foreground mb-12 font-light leading-relaxed max-w-lg"
                 >
-                  I craft beautiful, functional web applications with modern
-                  technologies and thoughtful user experiences.
+                  I’m a passionate developer specializing in full-stack web
+                  development, Flutter mobile apps, and modern web design.I
+                  build functional, visually appealing, and user-friendly
+                  applications that bring ideas to life with clean code and
+                  creativity.
                 </motion.p>
                 {/* buttons - desktop */}
                 <motion.div variants={itemVariants} className="flex gap-6 mb-8">
@@ -244,7 +248,7 @@ export const HeroSection = () => {
                       whileHover={{ y: -3, scale: 1.1 }}
                       className="p-3 rounded-full transition-colors text-foreground"
                     >
-                      <social.icon size={20} /> sdgdbib 
+                      <social.icon size={20} />
                     </motion.a>
                   ))}
                 </motion.div>
@@ -254,19 +258,9 @@ export const HeroSection = () => {
                 initial="hidden"
                 animate="visible"
                 variants={imageVariants}
-                className="flex justify-center lg:justify-end"
+                className="flex justify-center lg:justify-center"
               >
                 <div className="relative">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="w-80 h-96 rounded-3xl overflow-hidden border-4 border-gray-400 shadow-2xl"
-                  >
-                    <img
-                      src={profileImage}
-                      alt="profile"
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
                   {/* decorative element */}
                   <motion.div
                     animate={{ rotate: 360 }}
@@ -286,6 +280,16 @@ export const HeroSection = () => {
                     }}
                     className="absolute -inset-0 rounded-3xl border-purple-500/10"
                   />
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="w-80 h-96 rounded-3xl overflow-hidden border-4 border-gray-400 shadow-2xl"
+                  >
+                    <img
+                      src={profileImage}
+                      alt="profile"
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
                 </div>
               </motion.div>
             </div>

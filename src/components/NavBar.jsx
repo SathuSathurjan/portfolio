@@ -52,7 +52,7 @@ export const NavBar = () => {
           whileHover={{ scale: 1.05 }}
           className="flex items-center space-x-2 cursor-pointer"
         >
-          <span className="text-lg ml-1">Thavarasa Sathurjan</span>
+          <span className="text-lg ml-1 text-blue-500">Thavarasa Sathurjan</span>
         </motion.div>
         {/* desktop navigation */}
         <div className="hidden md:flex items-center space-x-8">
