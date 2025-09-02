@@ -1,6 +1,7 @@
 import React from "react";
-import {useRef} from "react";
+import { useRef } from "react";
 import { useInView, motion, useScroll, useTransform } from "framer-motion";
+import { containerVariants, itemVariants } from "../utils/helper";
 
 const AboutSection = () => {
   const sectionRef = useRef(null);
@@ -47,7 +48,27 @@ const AboutSection = () => {
       ref={sectionRef}
       className="py-24 px-6 text-foreground bg-background relative overflow-hidden"
     >
-
+      {/* background elements */}
+      <motion.div style={{ y }} className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-40 right-1/3 w-80 h-80 rounded-full blur-3xl opacity-10 bg-blue-400" />
+        <div className="absolute bottom-20 left-1/3 w-96 h-96 rounded-full blur-3xl opacity-10 bg-purple-400" />
+      </motion.div>
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* section header */}
+        <motion.div
+          initial="hidden"
+          variants={containerVariants}
+          animate={isInView ? "visible" : "hidden"}
+          className="text-center mb-20"
+        >
+          <motion.div
+            variants={itemVariants}
+            className="text-sm uppercase tracking-widest text-foreground mb-4"
+          >
+            Get to know me
+          </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 };
