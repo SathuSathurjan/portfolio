@@ -227,7 +227,7 @@ export const HeroSection = () => {
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => scrollToSection("contact")}
-                    className="border px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 cursor-pointer"
+                    className="border border-blue-500 text-blue-500 px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 cursor-pointer"
                   >
                     Get in Touch
                   </motion.button>
