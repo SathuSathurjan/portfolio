@@ -117,7 +117,7 @@ export const HeroSection = () => {
                     Sathurjan
                   </span>
                   <br />
-                  <span className="text-foreground font-medium flex justify-start pl-8 gap-3 text-xl">I'm a
+                  <span className="text-foreground max-w-xl mx-auto font-medium flex justify-start pl-8 gap-3 text-xl">I'm a
                     <TextChanger />
                   </span>
                 </motion.h1>
