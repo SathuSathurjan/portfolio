@@ -67,7 +67,55 @@ const AboutSection = () => {
           >
             Get to know me
           </motion.div>
+          <motion.h2
+            variants={itemVariants}
+            className="
+          text-3xl md:text-5xl font-foreground mb-6"
+          >
+            About
+            <span className="text-blue-500 font-medium"> Me</span>
+          </motion.h2>
         </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* personal details */}
+          <motion.div
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={containerVariants}
+            className="space-y-8"
+          >
+            <motion.div
+              variants={itemVariants}
+              className="p-8 rounded-2xl border bg-background backdrop-blur-sm"
+            >
+              <p className="text-lg leading-relaxed mb-6 font-gray">
+                I am a passionate and motivated Software Developer with hands-on
+                experience in both web and mobile application development. I
+                began my career with a 6-month internship, where I built a
+                strong foundation in PHP, MySQL, HTML, CSS, JavaScript, Flutter
+                and Bootstrap. Afterward, I worked as an Associate Software
+                Engineer, further expanding my skills in frontend and backend
+                development while collaborating with teams to deliver real-world
+                projects.
+              </p>
+              <p className="text-lg leading-relaxed mb-6 font-gray">
+                I enjoy solving problems, writing clean and efficient code, and
+                continuously learning new technologies. I am currently exploring
+                React.js and Laravel, with the goal of growing as a developer
+                and contributing to the creation of impactful, user-friendly
+                software solutions.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="text-center py-8">
+              <div className="text-sm mb-4 text-gray">
+                Crafted with passion by
+              </div>
+              <div className="text-lg font-medium text-blue-500 mt-2">Thavarasa Sathurjan</div>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
