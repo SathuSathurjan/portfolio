@@ -15,6 +15,12 @@ export const HeroSection = () => {
     }
   };
 
+  const SocialLinks = [
+    { icon: GithubIcon, href: "#" },
+    { icon: LinkedinIcon, href: "#" },
+    { icon: MailIcon, href: "#" },
+  ];
+
   const textVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -117,7 +123,8 @@ export const HeroSection = () => {
                     Sathurjan
                   </span>
                   <br />
-                  <span className="text-foreground max-w-xl mx-auto font-medium flex justify-start pl-8 gap-3 text-xl">I'm a
+                  <span className="text-foreground max-w-xl mx-auto font-medium flex justify-start pl-8 gap-3 text-xl">
+                    I'm a
                     <TextChanger />
                   </span>
                 </motion.h1>
@@ -160,11 +167,7 @@ export const HeroSection = () => {
                   variants={itemVariants}
                   className="flex justify-center space-x-6 mb-8"
                 >
-                  {[
-                    { icon: GithubIcon, href: "#" },
-                    { icon: LinkedinIcon, href: "#" },
-                    { icon: MailIcon, href: "#" },
-                  ].map((social, index) => (
+                  {SocialLinks.map((social, index) => (
                     <motion.a
                       key={index}
                       href={social.href}
