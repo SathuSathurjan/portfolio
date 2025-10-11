@@ -50,7 +50,7 @@ export const HeroSection = () => {
     <div className="min-h-screen transition-all duration-500 bg-background">
       {/* hero section */}
       <motion.section
-        id="hero"
+        id="home"
         className="min-h-screen flex items-center justify-center relative px-6 pt-10"
       >
         <div className="absolute inset-0 overflow-hidden">
